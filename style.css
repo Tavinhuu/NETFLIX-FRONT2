@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #141414;
+    color: #fff;
+}
+
+.barra-navegacao {
+    background-color: #1c1c1c;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0000;
+    font-family: Arial;
+}
+
+.menu-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+.menu-links a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+.menu-links a:hover {
+    color: #ff0000;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.conteudo-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #2a2a2a;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.conteudo-dropdown li {
+    width: 100%;
+}
+
+.conteudo-dropdown li a {
+    color: #fff;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.conteudo-dropdown li a:hover {
+    background-color: #444;
+}
+
+.dropdown:hover .conteudo-dropdown {
+    display: block;
+}
+
+.dropdown:hover a {
+    color: #ff0000;
+}
+
+button {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 24px;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.primario-btn {
+    background: #fff;
+    color: #000;
+}
+
+.primario-btn:hover {
+    background: #BFBFBF;
+}
+
+.secundario-btn {
+    background: #E50914;
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.secundario-btn:hover {
+    background: #2C2C2C;
+    color: #fff;
+}
+
+
+.banner-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url("https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABaJxHN38-3sfEp7RjlljL1WbkrwrLPUSfL_rbwp9ifuNFhJWVgTpDz6tUo0CXgUDSmN02QBJ5pwWmTsiDr-6P13Cm1xJp7SHLEBb.jpg?r=56c");
+    display: flex;
+    width: 100%;
+    padding-bottom: 40%;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    bottom: 10%;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.banner-desc {
+    font-size: 16px;
+    color: rgb(219, 219, 219);
+    font-weight: 450;
+    padding-bottom: 5px;
+    z-index: 2;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.filmes-caro {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.secao-filmes {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin: 20px 0;
+}
+
+.item {
+    padding: 0 2px;
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.2);
+}
+
+.secao-filmes .arrow__btn {
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+    font-size: 6em;
+    background: rgb(0, 0, 0);
+    width: 80px;
+    padding: 20px;
+    text-align: center;
+    z-index: 2; 
+    opacity: 0.8;
+    transition: opacity 0.3s ease; 
+}
+
+.secao-filmes .arrow__btn:hover {
+    opacity: 1; 
+}
+
+
+.secao-filmes a:nth-of-type(1) {
+    top: 50%; 
+    left: 0;
+    transform: translateY(-50%); 
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+
+.secao-filmes a:nth-of-type(2) {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%); 
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
+
+
